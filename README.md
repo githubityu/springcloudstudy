@@ -1,6 +1,8 @@
 # springcloudstudy
 #### springboot gradle 多模块微服务项目
+#### spring cloud Eureka Feign Hystrix Zull Config Bus JWT Security
 #### 用到了微服务常见技术
+#### JWT Security-->studyadmin
 ####  Eureka Server-->studyeureka
 ####  Eureka Client-->studyadmin
 ####  Feign  Hystrix-->studyadmin
