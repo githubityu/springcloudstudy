@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: 47.94.169.13
+    port: 5675
+    virtual-host: /
+    username: user
+    password: 111111
+    publisher-confirms: true #如果对异步消息需要回调必须设置为true
+    cache:
+      channel:
+        size: 100
+
+server:
+  port: 8089
+
