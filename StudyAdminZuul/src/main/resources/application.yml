@@ -1,0 +1,22 @@
+server:
+  port: 9011
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: study-adminzuul
+  main:
+    allow-bean-definition-overriding: true
+zuul:
+  routes:
+    study-api:
+      path: /api/**
+      serviceId: study-api
+    study-admin:
+      path: /admin/**
+      serviceId: study-admin
+#  strip-prefix: false

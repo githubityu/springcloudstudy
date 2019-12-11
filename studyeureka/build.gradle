@@ -1,0 +1,7 @@
+
+version '1.0-SNAPSHOT'
+
+dependencies {
+    implementation libraries['spring-cloud-starter-netflix-eureka-server']
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

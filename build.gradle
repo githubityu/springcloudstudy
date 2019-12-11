@@ -1,0 +1,64 @@
+plugins {
+    id("org.springframework.boot") version "2.1.9.RELEASE"
+    id ("java")
+}
+apply from: 'dependencies.gradle'
+allprojects {
+
+    // 定义仓库
+    repositories {
+        maven{ url 'https://maven.aliyun.com/repository/public/' }
+    }
+
+    group 'com.ityu'
+    version '1.0-SNAPSHOT'
+}
+
+subprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    // spring统一依赖管理
+    apply plugin: 'io.spring.dependency-management'
+
+    dependencyManagement {
+        imports {
+            mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+            mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Greenwich.SR2'
+        }
+    }
+
+    /**
+     * 避免出现idea中可以运行，编译报错：程序包xxx不存在
+     * https://blog.csdn.net/li295214001/article/details/88942082
+     */
+    jar {
+        enabled = true
+    }
+
+    bootJar {
+        enabled = true
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    // java编译的时候缺省状态下会因为中文字符而失败
+    [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8'
+
+    dependencies {
+        implementation libraries['spring-boot-starter']
+        implementation libraries['spring-boot-starter-web']
+        implementation libraries['spring-boot-starter-aop']
+        compileOnly libraries['lombok']
+        annotationProcessor libraries['lombok']
+//        implementation libraries['spring-cloud-config-server']
+//        implementation libraries['spring-cloud-starter-netflix-eureka-client']
+//        implementation libraries['spring-cloud-starter-netflix-eureka-server']
+//        implementation libraries['spring-boot-admin-starter-server']
+//        implementation libraries['spring-boot-starter-security']
+        implementation("cn.hutool:hutool-all:4.6.8")
+        testImplementation libraries['spring-boot-starter-test']
+    }
+
+}

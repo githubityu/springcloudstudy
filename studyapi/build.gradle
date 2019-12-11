@@ -1,0 +1,14 @@
+
+version '1.0-SNAPSHOT'
+
+dependencies {
+    implementation libraries['swagger2']
+    implementation libraries['swagger-ui']
+    implementation libraries['spring-cloud-starter-netflix-eureka-client']
+    implementation libraries['spring-cloud-starter-config']
+    implementation libraries['spring-cloud-stream-binder-rabbit']
+    implementation libraries['spring-boot-starter-actuator']
+    implementation libraries['spring-cloud-bus']
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile project(':common')
+}

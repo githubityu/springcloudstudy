@@ -1,0 +1,9 @@
+version '1.0-SNAPSHOT'
+
+
+dependencies {
+    implementation libraries['spring-cloud-config-server']
+    implementation libraries['spring-cloud-stream-binder-rabbit']
+    implementation libraries['spring-cloud-bus']
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
