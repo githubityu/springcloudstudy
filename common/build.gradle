@@ -1,0 +1,12 @@
+
+version '1.0-SNAPSHOT'
+
+
+dependencies {
+    implementation libraries['swagger2']
+    implementation libraries['swagger-ui']
+    implementation libraries['spring-boot-starter-security']
+    implementation libraries['fastjson']
+    implementation libraries['jwt']
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

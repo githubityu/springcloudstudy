@@ -1,0 +1,41 @@
+ext.versions = [
+        springBoot        : '2.1.9.RELEASE',
+        springCloud        : '2.0.1.RELEASE',
+        eurekaServer        : '1.0.0.RELEASE',
+        adminServer        : '2.2.0',
+        commonsLang3      : '3.8.1'
+]
+
+// 各种可能会用到的jar包
+ext.libraries = [
+        // Spring Boot
+        "spring-boot-starter"                : "org.springframework.boot:spring-boot-starter:${versions.springBoot}",
+        "spring-boot-starter-security"                : "org.springframework.boot:spring-boot-starter-security:${versions.springBoot}",
+        "spring-boot-starter-web"            : "org.springframework.boot:spring-boot-starter-web:${versions.springBoot}",
+        "spring-boot-starter-actuator"            : "org.springframework.boot:spring-boot-starter-actuator:${versions.springBoot}",
+        "spring-boot-starter-aop"            : "org.springframework.boot:spring-boot-starter-aop:${versions.springBoot}",
+        "spring-boot-starter-log4j2"         : "org.springframework.boot:spring-boot-starter-log4j2:${versions.springBoot}",
+        "spring-boot-starter-test"           : "org.springframework.boot:spring-boot-starter-test:${versions.springBoot}",
+        "spring-boot-starter-tomcat"         : "org.springframework.boot:spring-boot-starter-tomcat:${versions.springBoot}",
+        "spring-boot-starter-jdbc"           : "org.springframework.boot:spring-boot-starter-jdbc:${versions.springBoot}",
+        "spring-boot-starter-data-rest"      : "org.springframework.boot:spring-boot-starter-data-rest:${versions.springBoot}",
+        "spring-cloud-config-server"         : "org.springframework.cloud:spring-cloud-config-server:${versions.springCloud}",
+        "spring-cloud-starter-config"         : "org.springframework.cloud:spring-cloud-starter-config:${versions.springCloud}",
+        "spring-cloud-starter-netflix-zuul"         : "org.springframework.cloud:spring-cloud-starter-netflix-zuul:${versions.springCloud}",
+        "spring-boot-admin-starter-server"         : "de.codecentric:spring-boot-admin-starter-server:${versions.adminServer}",
+        "spring-cloud-starter-netflix-eureka-client"      : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${versions.springCloud}",
+        "spring-cloud-starter-netflix-eureka-server"      : "org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:${versions.springCloud}",
+        "spring-cloud-stream-binder-rabbit"      : "org.springframework.cloud:spring-cloud-stream-binder-rabbit:${versions.springCloud}",
+        "spring-cloud-bus"      : "org.springframework.cloud:spring-cloud-bus:${versions.springCloud}",
+        "spring-cloud-starter-openfeign"      : "org.springframework.cloud:spring-cloud-starter-openfeign:${versions.springCloud}",
+        // apache tools
+        "commons-lang3"                      : "org.apache.commons:commons-lang3:${versions.commonsLang3}",
+        "swagger2"                      : "io.springfox:springfox-swagger2:2.9.2",
+        "swagger-ui"                      : "io.springfox:springfox-swagger-ui:2.9.2",
+        "lombok"                      : "org.projectlombok:lombok",
+        "fastjson"                      : "com.alibaba:fastjson:1.2.51",
+        "jwt"                      : "io.jsonwebtoken:jjwt:0.9.1",
+
+
+
+]
