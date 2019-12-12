@@ -1,0 +1,9 @@
+
+version '1.0-SNAPSHOT'
+
+
+dependencies {
+    implementation libraries['spring-boot-starter-amqp']
+    implementation libraries['fastjson']
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

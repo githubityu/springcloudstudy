@@ -16,6 +16,7 @@ ext.libraries = [
         "spring-boot-starter-aop"            : "org.springframework.boot:spring-boot-starter-aop:${versions.springBoot}",
         "spring-boot-starter-log4j2"         : "org.springframework.boot:spring-boot-starter-log4j2:${versions.springBoot}",
         "spring-boot-starter-test"           : "org.springframework.boot:spring-boot-starter-test:${versions.springBoot}",
+        "spring-boot-starter-amqp"           : "org.springframework.boot:spring-boot-starter-amqp:${versions.springBoot}",
         "spring-boot-starter-tomcat"         : "org.springframework.boot:spring-boot-starter-tomcat:${versions.springBoot}",
         "spring-boot-starter-jdbc"           : "org.springframework.boot:spring-boot-starter-jdbc:${versions.springBoot}",
         "spring-boot-starter-data-rest"      : "org.springframework.boot:spring-boot-starter-data-rest:${versions.springBoot}",

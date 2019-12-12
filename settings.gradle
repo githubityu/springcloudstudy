@@ -14,5 +14,6 @@ include 'StudyAdminZuul'
 include 'studyadmin'
 include 'studyapi'
 include 'common'
-include 'studyconfig2'
+include 'studystreamrmq'
+include 'studystreamrmqcustomer'
 

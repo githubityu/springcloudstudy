@@ -1,10 +1,12 @@
 package com.ityu.studystreamrmq.rabbitmq;
 
 
+import org.springframework.amqp.ImmediateAcknowledgeAmqpException;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.listener.RabbitListenerContainerFactory;
+import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -89,6 +91,8 @@ public class RabbitMqConfig {
                 .with(QueueEnum.QUEUE_TTL_ORDER_CANCEL.getRouteKey());
     }
 
+
+    //https://www.jianshu.com/p/2c5eebfd0e95
 //    @Bean
 //    public RabbitListenerContainerFactory<?> rabbitListenerContainerFactory(ConnectionFactory connectionFactory) {
 //        SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
@@ -98,5 +102,23 @@ public class RabbitMqConfig {
 //        return factory;
 //    }
 
+//    @Bean
+//    public SimpleMessageListenerContainer messageListenerContainer(ConnectionFactory connectionFactory) {
+//        SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+//        container.setConnectionFactory(connectionFactory);
+//        container.setQueueNames("consumer_queue");              // 监听的队列
+//        container.setAcknowledgeMode(AcknowledgeMode.AUTO);     // 根据情况确认消息
+//        container.setMessageListener((MessageListener) (message) -> {
+//            System.out.println("====接收到消息=====");
+//            System.out.println(new String(message.getBody()));
+//            //抛出NullPointerException异常则重新入队列
+//            //throw new NullPointerException("消息消费失败");
+//            //当抛出的异常是AmqpRejectAndDontRequeueException异常的时候，则消息会被拒绝，且requeue=false
+//            //throw new AmqpRejectAndDontRequeueException("消息消费失败");
+//            //当抛出ImmediateAcknowledgeAmqpException异常，则消费者会被确认
+//            throw new ImmediateAcknowledgeAmqpException("消息消费失败");
+//        });
+//        return container;
+//    }
 
 }
