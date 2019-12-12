@@ -10,6 +10,7 @@
 ####  Zull 客户端-->studyadmin
 ####  Config  Bus  -->studyconfig
 ####  Config    -->studyapi
+####  RabbitMQ     -->studystreamrmq
 
 #### 启动顺序
 >studyconfig->studyeureka->后面任意
@@ -18,7 +19,8 @@
 [参考文章](https://blog.csdn.net/yujunlong3919/article/details/103490068)
 #### jwt和Security 
 [参考文章](https://blog.csdn.net/yujunlong3919/article/details/103481152)
-
+#### RabbitMQ
+[参考文章](https://blog.csdn.net/yujunlong3919/article/details/103507217)
 
 
 
